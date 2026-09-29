@@ -1,0 +1,5 @@
+{
+  "name":"whale-alive-prototype","version":"0.1.0","private":true,"type":"module",
+  "scripts":{"test":"node --test tests/*.test.mjs","mcp":"node bridge/mcp-server.mjs","build":"dotnet build prototype/WhaleAlive.csproj -c Release"},
+  "dependencies":{"@modelcontextprotocol/sdk":"1.29.0","zod":"4.4.3"}
+}

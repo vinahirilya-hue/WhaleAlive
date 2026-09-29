@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType><TargetFramework>net9.0-windows10.0.19041.0</TargetFramework>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath><OutputPath>bin\$(Configuration)\net9.0-windows\</OutputPath>
+    <UseWPF>true</UseWPF><Nullable>enable</Nullable><ImplicitUsings>enable</ImplicitUsings>
+    <AssemblyName>WhaleAlive</AssemblyName><ApplicationManifest>app.manifest</ApplicationManifest>
+    <ApplicationIcon>Branding\WhaleAlive.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup><Content Include="Assets\**\*" CopyToOutputDirectory="PreserveNewest" /></ItemGroup>
+  <ItemGroup><Resource Include="Branding\WhaleAlive.ico" /></ItemGroup>
+  <ItemGroup><Content Include="Identity\AppxManifest.xml" CopyToOutputDirectory="PreserveNewest" /></ItemGroup>
+</Project>

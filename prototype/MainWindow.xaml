@@ -1,0 +1,21 @@
+<Window x:Class="WhaleAlive.MainWindow" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:local="clr-namespace:WhaleAlive" xmlns:shell="clr-namespace:System.Windows.Shell;assembly=PresentationFramework" Title="Whale Alive" Icon="{x:Static local:GlassAppearance.AppIcon}" Width="1080" Height="780" MinWidth="960" MinHeight="650" Background="#EDF5FF" Foreground="#243C68" FontFamily="Microsoft YaHei UI" WindowStartupLocation="CenterScreen">
+ <shell:WindowChrome.WindowChrome><shell:WindowChrome CaptionHeight="50" ResizeBorderThickness="6" CornerRadius="16" GlassFrameThickness="0" UseAeroCaptionButtons="False"/></shell:WindowChrome.WindowChrome>
+ <Border x:Name="GlassShell" CornerRadius="16" BorderBrush="#ECFFFFFF" BorderThickness="1" Padding="10">
+  <Border.Background><LinearGradientBrush StartPoint="0,0" EndPoint="1,1"><GradientStop Color="#D9F6FAFF"/><GradientStop Color="#CBE4EFFF" Offset="1"/></LinearGradientBrush></Border.Background>
+  <Grid><Grid.RowDefinitions><RowDefinition Height="43"/><RowDefinition Height="*"/></Grid.RowDefinitions>
+   <DockPanel Margin="12,0,4,7"><StackPanel DockPanel.Dock="Right" Orientation="Horizontal" shell:WindowChrome.IsHitTestVisibleInChrome="True"><Button Content="—" ToolTip="最小化" Click="MinimizeClick" Style="{StaticResource QuietButton}" Width="42" Padding="8,5"/><Button Content="□" ToolTip="最大化 / 还原" Click="MaximizeClick" Style="{StaticResource QuietButton}" Width="42" Padding="8,5"/><Button Content="×" ToolTip="关闭设置，继续陪伴" Click="CloseSettingsClick" Style="{StaticResource QuietButton}" Width="42" FontSize="22" Padding="8,2"/></StackPanel><StackPanel Orientation="Horizontal" VerticalAlignment="Center"><Image Source="{x:Static local:GlassAppearance.Logo}" Width="28" Height="24" Margin="0,0,10,0"/><TextBlock Text="Whale Alive" FontSize="17" FontWeight="SemiBold" VerticalAlignment="Center"/></StackPanel></DockPanel>
+ <Grid Grid.Row="1"><Grid.ColumnDefinitions><ColumnDefinition Width="235"/><ColumnDefinition Width="12"/><ColumnDefinition Width="*"/></Grid.ColumnDefinitions>
+  <Border Background="#7BFFFFFF" BorderBrush="#B9D8E8FA" BorderThickness="1" CornerRadius="12" Padding="16">
+   <Grid><Grid.RowDefinitions><RowDefinition Height="Auto"/><RowDefinition Height="Auto"/><RowDefinition Height="*"/><RowDefinition Height="Auto"/></Grid.RowDefinitions>
+    <DockPanel Margin="0,0,0,12"><Button DockPanel.Dock="Right" Content="刷新" Click="RefreshClick" Padding="10,5" FontSize="11"/><StackPanel><TextBlock Text="桌面图标" FontWeight="SemiBold" FontSize="15"/><TextBlock x:Name="IconCount" Foreground="{StaticResource Muted}" FontSize="10" Margin="0,3,0,0"/></StackPanel></DockPanel>
+    <TextBox x:Name="SearchBox" Grid.Row="1" Tag="搜索图标…" Style="{StaticResource RoundedInput}" ToolTip="搜索图标 · Ctrl 多选" TextChanged="SearchChanged" Margin="0,0,0,10"/>
+    <ListBox x:Name="IconList" Grid.Row="2" Background="Transparent" SelectionMode="Extended" SelectionChanged="SelectionChanged" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+    <ListBox.ItemTemplate><DataTemplate><DockPanel><Image Source="{Binding Image}" Width="30" Height="30" Margin="0,0,10,0"/><TextBlock Text="{Binding Name}" VerticalAlignment="Center" TextWrapping="NoWrap" TextTrimming="CharacterEllipsis" FontSize="12"/></DockPanel></DataTemplate></ListBox.ItemTemplate>
+    </ListBox>
+    <TextBlock x:Name="PositionText" Grid.Row="3" Foreground="{StaticResource Muted}" FontSize="11" Margin="0,12,0,0" MaxHeight="34" TextTrimming="CharacterEllipsis"/>
+   </Grid>
+  </Border>
+  <ContentControl x:Name="WorkspaceHost" Grid.Column="2" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch"/>
+ </Grid></Grid></Border>
+</Window>
+

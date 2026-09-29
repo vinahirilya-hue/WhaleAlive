@@ -1,0 +1,29 @@
+node_modules/
+prototype/bin/
+prototype/obj/
+artifacts/
+upstream/
+/assets/
+__pycache__/
+*.py[cod]
+.vs/
+.idea/
+.vscode/
+*.user
+*.mp4
+
+# Local production references and verification evidence
+/TEST-REPORT.md
+/animation-preview/
+/design/
+/bridge/whale-alive.cordis.yml
+/bridge/dsh-health.mjs
+
+# One-off source-frame repair scripts (finished runtime frames are tracked)
+/tools/clean-wave-background.py
+/tools/package-cursor-tug.py
+/tools/package-pickup-repair.py
+/tools/refine-holding-hair-alpha.py
+/tools/remove-sequence-black-background.py
+/tools/repair-cursor-tug.py
+/tools/repair-pickup-frames.py

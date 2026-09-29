@@ -1,0 +1,8 @@
+<DrawingImage xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+ <DrawingImage.Drawing>
+  <DrawingGroup>
+   <GeometryDrawing Brush="#5276B3" Geometry="M 2,14 C 2,8 10,5 18,7 C 22,8 24,11 24,14 C 29,14 30,10 30,8 C 35,10 35,17 28,19 C 22,25 10,26 4,21 C 1,19 0,17 2,14 Z M 13,5 C 8,2 10,0 13,2 L 15,5 Z M 17,5 C 16,0 21,0 21,2 C 21,4 18,3 17,5 Z"/>
+   <GeometryDrawing Brush="White"><GeometryDrawing.Geometry><EllipseGeometry Center="8,14" RadiusX="1.3" RadiusY="1.3"/></GeometryDrawing.Geometry></GeometryDrawing>
+  </DrawingGroup>
+ </DrawingImage.Drawing>
+</DrawingImage>
